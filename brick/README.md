@@ -7,15 +7,15 @@ Developed with 💙 by [Very Good Ventures][very_good_ventures_link] 🦄
 [![License: MIT][license_badge]][license_link]
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
-A Very Good Flutter Starter Project for WearOS devices created by Very Good Ventures 🦄.
+A Very Good Flutter starter project for Wear OS devices created by Very Good Ventures 🦄.
 
 ## What's Included ✨
 
-Out of the box, Very Good Core includes:
+Out of the box, Very Good Wear App includes:
 
-- ✅ Made for [WearOS][wearos_link]
+- ✅ Made for [Wear OS][wearos_link]
 - ✅ Rotary input support
-- ✅ Adaptive UI - Change colors when the device goes on Ambient mode
+- ✅ Adaptive UI - Changes colors when the device is in ambient mode
 - ✅ [Build Flavors][flutter_flavors_link] - Multiple flavor support for development, staging, and production
 - ✅ [Internationalization Support][internationalization_link] - Internationalization support using synthetic code generation to streamline the development process
 - ✅ [Sound Null-Safety][null_safety_link] - No more null-dereference exceptions at runtime. Develop with a sound, static type system.

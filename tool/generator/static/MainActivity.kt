@@ -2,6 +2,7 @@ package {{org_name.dotCase()}}.{{project_name.snakeCase()}}
 
 import android.os.Bundle
 import androidx.annotation.NonNull
+import android.view.MotionEvent
 import com.samsung.wearable_rotary.WearableRotaryPlugin
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.plugins.GeneratedPluginRegistrant

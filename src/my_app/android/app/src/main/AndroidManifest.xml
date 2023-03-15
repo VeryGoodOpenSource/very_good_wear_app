@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.veryWearosApp">
+    package="com.example.veryGoodWearosApp">
    <uses-feature android:name="android.hardware.type.watch" />
    <application
         android:label="very_good_wearos_app"

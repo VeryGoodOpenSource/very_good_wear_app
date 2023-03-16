@@ -48,7 +48,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.veryWearosApp"
+        applicationId "com.example.veryGoodWearosApp"
         minSdkVersion 30
         targetSdkVersion 32
         versionCode flutterVersionCode.toInteger()
@@ -78,17 +78,17 @@ android {
         production {
             dimension "default"
             applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Very Good WearOS app"]
+            manifestPlaceholders = [appName: "Very Good WearOS App"]
         }
         staging {
             dimension "default"
             applicationIdSuffix ".stg"
-            manifestPlaceholders = [appName: "[STG] Very Good WearOS app"]
+            manifestPlaceholders = [appName: "[STG] Very Good WearOS App"]
         }
         development {
             dimension "default"
             applicationIdSuffix ".dev"
-            manifestPlaceholders = [appName: "[DEV] Very Good WearOS app"]
+            manifestPlaceholders = [appName: "[DEV] Very Good WearOS App"]
         }
     }
 

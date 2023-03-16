@@ -1,4 +1,4 @@
-package com.example.veryWearosApp
+package {{org_name.dotCase()}}.{{project_name.snakeCase()}}
 
 import android.os.Bundle
 import androidx.annotation.NonNull

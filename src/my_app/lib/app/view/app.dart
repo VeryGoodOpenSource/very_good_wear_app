@@ -8,14 +8,20 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Add ambient mode support
     return AmbientMode(
       child: const CounterPage(),
       builder: (context, mode, child) {
         return MaterialApp(
           theme: ThemeData(
-            useMaterial3: true,
+            // Uncomment this to use material 3
+            // useMaterial3: true,
             appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
+            // This makes elements such as buttons have a fewer pixels in
+            // padding and general spacing. good for devices with limited screen
+            // real state.
             visualDensity: VisualDensity.compact,
+            // When in ambient mode, change the apps color scheme
             colorScheme: mode == WearMode.active
                 ? const ColorScheme.dark(
                     primary: Color(0xFF00B5FF),

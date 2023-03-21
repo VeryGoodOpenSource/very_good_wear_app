@@ -1,5 +1,5 @@
 name: e2e
-description: VeryGoodCore's end-to-end testing package.
+description: Very Good Wear OS App's end-to-end testing package.
 publish_to: none
 
 environment:

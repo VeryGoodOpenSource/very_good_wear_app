@@ -4,7 +4,7 @@ repository: https://github.com/VeryGoodOpenSource/very_good_wear_app
 version: 0.0.1
 
 environment:
-  mason: ">=0.1.0-dev.41 <0.1.0"
+  mason: ">=0.1.0-dev.49 <0.1.0"
 
 vars:
   project_name:

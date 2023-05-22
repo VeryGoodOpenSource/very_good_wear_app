@@ -8,7 +8,7 @@ Future<void> simulatePlatformCall(
 ]) async {
   const standardMethod = StandardMethodCodec();
 
-  await TestDefaultBinaryMessengerBinding.instance!.defaultBinaryMessenger
+  await TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
       .handlePlatformMessage(
     channel,
     standardMethod.encodeMethodCall(MethodCall(method, arguments)),

@@ -1,3 +1,7 @@
+# 0.2.0
+
+- feat!: bump min Dart SDK to 3.0.0
+
 # 0.1.0
 
 - docs: fixed VeryGoodCore typo

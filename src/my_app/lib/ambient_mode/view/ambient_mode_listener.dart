@@ -1,5 +1,5 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 /// A simple [ValueNotifier] that listens to ambient mode changes.
 ///

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:very_good_wearos_app/ambient_mode/view/ambient_mode_listener.dart';
+import 'package:very_good_wearos_app/ambient_mode/ambient_mode.dart';
 import 'package:very_good_wearos_app/counter/counter.dart';
 import 'package:very_good_wearos_app/l10n/l10n.dart';
 

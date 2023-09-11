@@ -12,20 +12,23 @@ class AmbientModeListener extends ValueNotifier<bool> {
     channel.setMethodCallHandler(_onMethodCallHandler);
   }
 
-  @visibleForTesting
-  AmbientModeListener.test(MethodChannel channel) : this._(channel);
+  static const channel = MethodChannel('ambient_mode');
 
-  static final instance = AmbientModeListener._(
-    const MethodChannel('ambient_mode'),
-  );
+  static final instance = AmbientModeListener._(channel);
 
   bool get isAmbientModeActive => value;
+
+  @override
+  @visibleForTesting
+  set value(bool newValue) {
+    super.value = newValue;
+  }
 
   Future<dynamic> _onMethodCallHandler(MethodCall call) async {
     value = switch (call.method) {
       'onEnterAmbient' || 'onUpdateAmbient' => true,
       'onExitAmbient' => false,
-      _ => throw UnimplementedError()
+      _ => value
     };
   }
 }

@@ -8,9 +8,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
-      valueListenable: AmbientModeListener.instance,
-      child: const CounterPage(),
+    return AmbientModeBuilder(
       builder: (context, ambientModeActive, child) {
         return MaterialApp(
           theme: ThemeData(
@@ -39,6 +37,7 @@ class App extends StatelessWidget {
           home: child,
         );
       },
+      child: const CounterPage(),
     );
   }
 }

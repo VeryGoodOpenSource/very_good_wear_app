@@ -37,7 +37,7 @@ void main() {
 
       expect(listener.isAmbientModeActive, isFalse);
     });
-    
+
     test('doesnt change on unkown method', () async {
       final listener = AmbientModeListener.instance..value = true;
 

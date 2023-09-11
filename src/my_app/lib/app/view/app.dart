@@ -20,7 +20,7 @@ class App extends StatelessWidget {
             brightness: Brightness.dark,
             // When in ambient mode, change the apps color scheme
             colorScheme: ambientModeActive
-                ?  const ColorScheme.dark(
+                ? const ColorScheme.dark(
                     primary: Colors.white10,
                     onBackground: Colors.white10,
                     onSurface: Colors.white10,

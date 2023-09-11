@@ -12,8 +12,6 @@ class TestAmbientModeListener extends ValueNotifier<bool>
 }
 
 void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
-
   group('$AmbientModeBuilder', () {
     test('can be instantiated', () {
       final builder = AmbientModeBuilder(

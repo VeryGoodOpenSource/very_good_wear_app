@@ -9,6 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AmbientModeBuilder(
+      child: const CounterPage(),
       builder: (context, ambientModeActive, child) {
         return MaterialApp(
           theme: ThemeData(
@@ -17,15 +18,12 @@ class App extends StatelessWidget {
             // padding and general spacing. good for devices with limited screen
             // real state.
             visualDensity: VisualDensity.compact,
-            brightness: Brightness.dark,
             // When in ambient mode, change the apps color scheme
             colorScheme: ambientModeActive
                 ? const ColorScheme.dark(
-                    primary: Colors.white10,
+                    primary: Colors.white24,
                     onBackground: Colors.white10,
                     onSurface: Colors.white10,
-                    background: Colors.black,
-                    surface: Colors.black,
                   )
                 : const ColorScheme.dark(
                     primary: Color(0xFF00B5FF),
@@ -37,7 +35,6 @@ class App extends StatelessWidget {
           home: child,
         );
       },
-      child: const CounterPage(),
     );
   }
 }

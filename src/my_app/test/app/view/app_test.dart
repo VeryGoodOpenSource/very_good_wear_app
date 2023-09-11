@@ -28,7 +28,7 @@ void main() {
           ),
         );
 
-        await simulatePlatformCall('wear', 'onUpdateAmbient');
+        await simulatePlatformCall('ambient_mode', 'onUpdateAmbient');
         await tester.pumpAndSettle();
 
         expect(
@@ -40,7 +40,7 @@ void main() {
           ),
         );
 
-        await simulatePlatformCall('wear', 'onExitAmbient');
+        await simulatePlatformCall('ambient_mode', 'onExitAmbient');
         await tester.pumpAndSettle();
 
         expect(

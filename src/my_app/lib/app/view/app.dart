@@ -19,14 +19,19 @@ class App extends StatelessWidget {
             // padding and general spacing. good for devices with limited screen
             // real state.
             visualDensity: VisualDensity.compact,
+            brightness: Brightness.dark,
             // When in ambient mode, change the apps color scheme
             colorScheme: ambientModeActive
-                ? const ColorScheme.dark(
-                    primary: Colors.white24,
+                ?  const ColorScheme.dark(
+                    primary: Colors.white10,
                     onBackground: Colors.white10,
                     onSurface: Colors.white10,
+                    background: Colors.black,
+                    surface: Colors.black,
                   )
-                : const ColorScheme.dark(primary: Color(0xFF00B5FF)),
+                : const ColorScheme.dark(
+                    primary: Color(0xFF00B5FF),
+                  ),
           ),
           debugShowCheckedModeBanner: false,
           localizationsDelegates: AppLocalizations.localizationsDelegates,

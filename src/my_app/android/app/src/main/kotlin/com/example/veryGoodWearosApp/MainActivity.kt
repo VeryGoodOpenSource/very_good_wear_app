@@ -38,6 +38,11 @@ class MainActivity : FlutterFragmentActivity(), AmbientModeSupport.AmbientCallba
         super.onCreate(savedInstanceState)
     }
 
+
+    /**
+     * Uppon the engine initialization, the ambient mode method channel is created and
+     * an ambient mode controller is attached to the activity.
+     */
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         channel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL)
@@ -46,6 +51,10 @@ class MainActivity : FlutterFragmentActivity(), AmbientModeSupport.AmbientCallba
 
     override fun getAmbientCallback(): AmbientModeSupport.AmbientCallback = FlutterAmbientCallback()
 
+
+    /**
+     * A callback class to handle ambient mode events.
+     */
     private inner class FlutterAmbientCallback : AmbientModeSupport.AmbientCallback() {
         override fun onEnterAmbient(ambientDetails: Bundle?) {
             channel.invokeMethod("onEnterAmbient", null)

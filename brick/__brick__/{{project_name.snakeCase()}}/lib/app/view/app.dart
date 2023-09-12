@@ -14,9 +14,7 @@ class App extends StatelessWidget {
       builder: (context, mode, child) {
         return MaterialApp(
           theme: ThemeData(
-            // Uncomment this to use material 3
-            // useMaterial3: true,
-            appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
+            useMaterial3: true,
             // This makes elements such as buttons have a fewer pixels in
             // padding and general spacing. good for devices with limited screen
             // real state.

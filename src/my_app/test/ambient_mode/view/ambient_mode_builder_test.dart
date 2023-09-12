@@ -5,7 +5,7 @@ import 'package:very_good_wearos_app/ambient_mode/ambient_mode.dart';
 class _TestAmbientModeListener extends ValueNotifier<bool>
     implements AmbientModeListener {
   // ignore: avoid_positional_boolean_parameters
-  TestAmbientModeListener(super.value);
+  _TestAmbientModeListener(super.value);
 
   @override
   bool get isAmbientModeActive => value;
@@ -22,7 +22,7 @@ void main() {
     });
 
     testWidgets('builds with ambient mode', (tester) async {
-      final listener = TestAmbientModeListener(true);
+      final listener = _TestAmbientModeListener(true);
 
       await tester.pumpWidget(
         MaterialApp(

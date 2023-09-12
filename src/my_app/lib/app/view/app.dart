@@ -10,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return AmbientModeBuilder(
       child: const CounterPage(),
-      builder: (context, ambientModeActive, child) {
+      builder: (context, isAmbientModeActive, child) {
         return MaterialApp(
           theme: ThemeData(
             useMaterial3: true,
@@ -19,7 +19,7 @@ class App extends StatelessWidget {
             // real state.
             visualDensity: VisualDensity.compact,
             // When in ambient mode, change the apps color scheme
-            colorScheme: ambientModeActive
+            colorScheme: isAmbientModeActive
                 ? const ColorScheme.dark(
                     primary: Colors.white24,
                     onBackground: Colors.white10,

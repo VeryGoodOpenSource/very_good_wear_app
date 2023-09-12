@@ -1,35 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:{{project_name.snakeCase()}}/ambient_mode/ambient_mode.dart';
 import 'package:{{project_name.snakeCase()}}/counter/counter.dart';
 import 'package:{{project_name.snakeCase()}}/l10n/l10n.dart';
-import 'package:wear/wear.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Add ambient mode support
-    return AmbientMode(
+    return AmbientModeBuilder(
       child: const CounterPage(),
-      builder: (context, mode, child) {
+      builder: (context, isAmbientModeActive, child) {
         return MaterialApp(
           theme: ThemeData(
-            // Uncomment this to use material 3
-            // useMaterial3: true,
-            appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
+            useMaterial3: true,
             // This makes elements such as buttons have a fewer pixels in
             // padding and general spacing. good for devices with limited screen
             // real state.
             visualDensity: VisualDensity.compact,
             // When in ambient mode, change the apps color scheme
-            colorScheme: mode == WearMode.active
+            colorScheme: isAmbientModeActive
                 ? const ColorScheme.dark(
-                    primary: Color(0xFF00B5FF),
-                  )
-                : const ColorScheme.dark(
                     primary: Colors.white24,
                     onBackground: Colors.white10,
                     onSurface: Colors.white10,
+                  )
+                : const ColorScheme.dark(
+                    primary: Color(0xFF00B5FF),
                   ),
           ),
           debugShowCheckedModeBanner: false,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:very_good_wearos_app/ambient_mode/ambient_mode.dart';
 
-class TestAmbientModeListener extends ValueNotifier<bool>
+class _TestAmbientModeListener extends ValueNotifier<bool>
     implements AmbientModeListener {
   // ignore: avoid_positional_boolean_parameters
   TestAmbientModeListener(super.value);

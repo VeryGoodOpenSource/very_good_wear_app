@@ -14,7 +14,6 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.18.0
-  wear: ^1.1.0
   wearable_rotary: ^2.0.0
 
 dev_dependencies:
@@ -22,7 +21,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.0
-  very_good_analysis: ^5.0.0
+  very_good_analysis: ^5.1.0
 
 flutter:
   uses-material-design: true

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:{{project_name.snakeCase()}}/ambient_mode/ambient_mode.dart';
 import 'package:{{project_name.snakeCase()}}/app/app.dart';
 import 'package:{{project_name.snakeCase()}}/counter/counter.dart';
 
@@ -7,6 +8,10 @@ import '../../helpers/helpers.dart';
 
 void main() {
   group('App', () {
+    setUpAll(() {
+      AmbientModeListener.instance.value = false;
+    });
+
     testWidgets('renders CounterPage', (tester) async {
       await tester.pumpWidget(const App());
       expect(find.byType(CounterPage), findsOneWidget);
@@ -28,7 +33,7 @@ void main() {
           ),
         );
 
-        await simulatePlatformCall('wear', 'onUpdateAmbient');
+        await simulatePlatformCall('ambient_mode', 'onUpdateAmbient');
         await tester.pumpAndSettle();
 
         expect(
@@ -40,7 +45,7 @@ void main() {
           ),
         );
 
-        await simulatePlatformCall('wear', 'onExitAmbient');
+        await simulatePlatformCall('ambient_mode', 'onExitAmbient');
         await tester.pumpAndSettle();
 
         expect(

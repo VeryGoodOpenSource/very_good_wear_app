@@ -64,4 +64,4 @@ jobs:
       - name: 📊 Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2
         with:
-          path: brick/output/test_app/coverage/lcov.info
+          path: output/test_app/coverage/lcov.info

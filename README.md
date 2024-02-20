@@ -49,7 +49,7 @@ Very Good CLI usage docs are available [here][cli_docs_usage].
    `mason make very_good_wear_app`
 
 [very_good_cli_link]: https://github.com/VeryGoodOpenSource/very_good_cli
-[coverage_badge]: src/my_app/coverage_badge.svg
+[coverage_badge]: brick/__brick__/{{project_name.snakeCase()}}/coverage_badge.svg
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_link]: https://opensource.org/licenses/MIT
 [logo_black]: https://raw.githubusercontent.com/VGVentures/very_good_brand/main/styles/README/vgv_logo_black.png#gh-light-mode-only
